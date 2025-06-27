@@ -1,4 +1,4 @@
-1. BC (Binary Classification)
+![classification_sonuc](https://github.com/user-attachments/assets/914f676a-7e7f-4653-84c7-226cd91f2be6)1. BC (Binary Classification)
 The BC model is built on a basic artificial neural network architecture that takes only 6 basic stress tensor components as input. The input data of the model was subjected to standardization (normalization) before training; thus, each feature was transformed so that its mean was zero and its standard deviation was one.
 
 2. BC-E (Binary Classification - Euclidean Distance)
@@ -36,6 +36,7 @@ In this model, instead of deep neural networks, the XGBoost classifier, which co
 Since there was a class imbalance in the dataset, the data was balanced by randomly multiplying the samples of aftershocks, thus ensuring that the classification performance became sensitive to the positive class. Then, all input variables were standardized to prevent scaling differences from disrupting model learning.
 In the learning process of the model, XGBoost's tree-based structure was used and the model established a separation structure based on information gain that optimizes node divisions within itself. In this model, many hyperparameters such as the depth of decision trees, learning rate, number of estimators, gamma value (penalty to prevent complex divisions), subsample and colsample rates were automatically adjusted with the Bayesian optimization method. Thus, the model was configured with parameter combinations that would maximize the ROC AUC score in the validation data.
 
+![Uploading classification_sonuc.png…]()
 
 DATASET:
 https://drive.google.com/drive/folders/1N3N2yJKz-NkAQ6PCGecFMOYdU7NhEw4K?usp=drive_link
